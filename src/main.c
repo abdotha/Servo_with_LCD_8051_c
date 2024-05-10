@@ -44,7 +44,7 @@ void uart_interrupt_handler() interrupt UART0_VECTOR
     if(RI==1)
     {
         LCD_CLEAR();
-        if ( SBUF == 'a')
+        if ( SBUF == 'g')
         {
             // set the intial value of Timers
             // create pulse with duty cycle 7.5% and period of 20ms
@@ -57,7 +57,7 @@ void uart_interrupt_handler() interrupt UART0_VECTOR
             
             LCD_STRING("GO ->>");
         }
-        else
+        else if(SBUF == 'r')
         {
             // set the intial value of Timers
             // create pulse with duty cycle 5% and period of 20ms
@@ -68,6 +68,18 @@ void uart_interrupt_handler() interrupt UART0_VECTOR
             low_reset=0x65;
 
             LCD_STRING("STOP");
+        }
+        else if(SBUF == 'y')
+        {
+           // set the intial value of Timers
+            // create pulse with duty cycle 5% and period of 20ms
+            high_set=0xFA;
+            low_set=0x9A;
+
+            high_reset=0xBD;
+            low_reset=0x65;
+
+            LCD_STRING("WAIT..");  
         }
         RI=0;
     }
