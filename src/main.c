@@ -90,7 +90,7 @@ void main()
 {
 	initial();
     LCD_INIT();   
-
+    LCD_STRING("Press the Button..");
     while (1)
     {
         Servo=1;
@@ -163,7 +163,7 @@ void LCD_DATA(uint8_t disp_data)
     LCD_PORT=disp_data;
     RS=1;
     E=1;
-    DELAY(1);
+    DELAY(8);
     E=0;
 }
 void LCD_STRING(int8_t *str)
