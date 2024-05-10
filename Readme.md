@@ -5,5 +5,9 @@
 - Servo motor 
 - LCD 
 
+## The PROJECT 
+- Used Cryslal: $11.0592MHz$ 
+- It use $UART$ to control in the $SERVO$
+- $LCD$ to desplay to **Go** or to **Stop**
 
-# the project include simulation 
+# The project include simulation 
