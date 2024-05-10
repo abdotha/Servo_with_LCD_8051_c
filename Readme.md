@@ -5,3 +5,5 @@
 - Servo motor 
 - LCD 
 
+
+# the project include simulation 
